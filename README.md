@@ -1,1 +1,1 @@
-# stepick_web_technologies_course
+# stepik_web_technologies_course
