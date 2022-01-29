@@ -5,4 +5,4 @@ sudo ln -sf /usr/local/var/www/stepik/etc/nginxMac80.conf /usr/local/etc/nginx/s
 sudo rm -rf /usr/local/etc/nginx/sites-enabled/default
 brew services restart nginx
 #sudo ln -sf /usr/local/var/www/stepik/etc/gunicorn.conf.py   /etc/gunicorn.d/test
-sudo gunicorn -c /usr/local/var/www/stepik/etc/gunicorn.conf.py 
+sudo gunicorn -c /usr/local/var/www/stepik/etc/gunicorn.conf.py hello:wsg_application
