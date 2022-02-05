@@ -9,5 +9,5 @@ sudo /etc/init.d/nginx restart
 #sudo ln -sf /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test.conf.py
 #sudo ln -sf /home/box/web/etc/dj_gunicorn.conf.py   /etc/gunicorn.d/dj_test.conf.py
 
-sudo gunicorn -c /home/box/web/etc/gunicorn.conf.py hello:wsg_application --daemon
-sudo gunicorn -c /home/box/web/etc/dj_gunicorn.conf.py ask.wsgi:application
+sudo gunicorn -c /home/box/web/etc/gunicorn.conf.py hello:wsg_application &
+sudo gunicorn -c /home/box/web/etc/dj_gunicorn.conf.py ask.wsgi:application &
