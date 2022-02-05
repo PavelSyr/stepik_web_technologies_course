@@ -7,4 +7,7 @@ sudo ln -sf /home/box/web/etc/nginx80.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
 sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test.conf.py
-sudo gunicorn -c /etc/gunicorn.d/test.conf.py hello:wsg_application
+sudo ln -s /home/box/web/etc/dj_gunicorn.conf.py   /etc/gunicorn.d/dj_test.conf.py
+
+sudo gunicorn -c /usr/local/var/www/stepik/etc/gunicorn.conf.py hello:wsg_application --daemon
+sudo gunicorn -c /usr/local/var/www/stepik/etc/dj_gunicorn.conf.py ask.wsgi:application
